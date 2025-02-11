@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VPN Extension</title>
+  <style>
+    body {
+      width: 250px;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f8ff; /* Пастельно-голубой фон */
+      padding: 20px;
+    }
+    h3 {
+      color: #333;
+    }
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    button {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #connectBtn {
+      background-color: #4caf50; /* Зеленый */
+    }
+    #disconnectBtn {
+      background-color: #f44336; /* Красный */
+    }
+    #status {
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+    #status.connected {
+      color: #4caf50; /* Зеленый текст */
+    }
+    #status.disconnected {
+      color: #f44336; /* Красный текст */
+    }
+    #status.error {
+      color: #ff9800; /* Оранжевый текст для ошибок */
+    }
+  </style>
+</head>
+<body>
+  <h3>VPN Control</h3>
+  <input type="text" id="proxyHost" placeholder="Enter Proxy Host">
+  <input type="text" id="proxyPort" placeholder="Enter Proxy Port">
+  <button id="connectBtn">Connect</button>
+  <button id="disconnectBtn">Disconnect</button>
+  <div id="status">Disconnected</div>
+  <script src="popup.js"></script>
+</body>
+</html>
